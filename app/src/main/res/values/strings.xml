@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">OnlabApp</string>
+    <string name="app_name">Tárnoky mézes</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>
