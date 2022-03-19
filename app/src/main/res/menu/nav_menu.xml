@@ -5,6 +5,8 @@
     
     >
 
+    <group android:checkableBehavior="single">
+
     <item
         android:id="@+id/nav_home"
         android:title="Főoldal"
@@ -24,5 +26,7 @@
         android:id="@+id/nav_fav"
         android:title="Kedvencek"
         android:icon="@drawable/ic_baseline_favorite_24"/>
+
+    </group>
 
 </menu>
