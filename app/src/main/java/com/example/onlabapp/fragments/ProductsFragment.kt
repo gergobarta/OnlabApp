@@ -14,10 +14,11 @@ import com.example.onlabapp.R
 import com.example.onlabapp.adapter.ProductsAdapter
 import com.example.onlabapp.data.Product
 import com.example.onlabapp.databinding.FragmentProductsBinding
+import kotlinx.android.synthetic.main.fragment_products.*
 
 
 class ProductsFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
     private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,9 +32,8 @@ class ProductsFragment : Fragment() {
         val inflated = inflater.inflate(R.layout.fragment_products, container, false)
 
         val products= arrayListOf<Product>()
-        for(i in 0..5){
-            products.add(Product("", "https://via.placeholder.com/150", 2.0))
-            println(i)
+        for(i in 0..6){
+            products.add(Product("pr "+i, "https://via.placeholder.com/150", 2.0))
         }
 
         recyclerView= inflated.findViewById(R.id.recycler_View)
