@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "257040559235",
+    "project_id": "tarnokymezes",
+    "storage_bucket": "tarnokymezes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257040559235:android:86e590bf3637ee05a7ffb6",
+        "android_client_info": {
+          "package_name": "com.example.onlabapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "257040559235-rlqe27elrj8ja84987h88c2ph870bfe1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFXfSA50y_VuUWUWsQO1NTI86ZLISfcoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "257040559235-rlqe27elrj8ja84987h88c2ph870bfe1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

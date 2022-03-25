@@ -13,7 +13,7 @@ import com.example.onlabapp.R
 import com.example.onlabapp.data.Product
 import com.squareup.picasso.Picasso
 
-class ProductsAdapter(private val products: ArrayList<Product>): RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
+class ProductsAdapter(private val products: ArrayList<Product> = arrayListOf<Product>()): RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ProductsAdapter.ViewHolder, position: Int) {
         val product=products[position]
@@ -41,6 +41,11 @@ class ProductsAdapter(private val products: ArrayList<Product>): RecyclerView.Ad
         val image: ImageView=itemView.findViewById(R.id.image)
         val title: TextView =itemView.findViewById(R.id.title)
         val price: TextView =itemView.findViewById(R.id.price)
+    }
+
+    fun addProduct(p: Product){
+        products.add(p)
+        notifyDataSetChanged()
     }
 
 }

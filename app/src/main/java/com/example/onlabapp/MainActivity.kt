@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.MenuItem
+import androidx.annotation.NonNull
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -19,18 +20,43 @@ import com.example.onlabapp.fragments.HomeFragment
 import com.example.onlabapp.fragments.LoginFragment
 import com.example.onlabapp.fragments.ProductsFragment
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.database.*
+import com.google.firebase.database.ktx.getValue
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var toggle: ActionBarDrawerToggle
     private lateinit var drawerLayout: DrawerLayout
+    private lateinit var reference: DatabaseReference
+    private lateinit var postReference: DatabaseReference
+    private lateinit var dataSnapshot: DataSnapshot
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+
+        println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
+
+        var lista:ArrayList<Product>
+        var valueeventlistener: ValueEventListener
+
+        /////////////////////////////////////////////////////
+        reference=FirebaseDatabase.getInstance().getReference("shopItems")
+
+
+
+
+
+        ////////////////////////////////////////////////////////
+
+
 
 
         drawerLayout = binding.drawerLayout
@@ -75,6 +101,10 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
+
+
 
 
 }
