@@ -29,6 +29,8 @@ class ProductsAdapter(private val products: ArrayList<Product> = arrayListOf<Pro
         view.setOnClickListener{
             val intent= Intent(parent.context, ProductDetails::class.java)
             intent.putExtra("title", products[holder.adapterPosition].title)
+            intent.putExtra("photoUrl", products[holder.adapterPosition].photoUrl)
+            intent.putExtra("price", products[holder.adapterPosition].price.toString())
             parent.context.startActivity(intent)
         }
         return holder
